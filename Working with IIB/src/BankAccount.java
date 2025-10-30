@@ -18,8 +18,31 @@ public class BankAccount {
         this.creationTimestamp = LocalDateTime.now().format(formatter);
 
         System.out.println("creating account with number: " + accountnumber);
+    }
 
+    public BankAccount(String accountholdername) {
+        System.out.println("setting the account holder name");
+        this.accountholdername = accountholdername;
+    }
 
+    public String getAccountnumber() {
+        return accountnumber;
+
+    }
+
+    public String getAccountholdername() {
+        return accountholdername;
+    }
+
+    public String getCreationTimestamp() {
+        return creationTimestamp;
+    }
+
+    public void displayAccountInfo() {
+        System.out.println("_____Bank Account Info_____");
+        System.out.println("Account Number: " + accountnumber);
+        System.out.println("Account Holder Name: " + accountholdername);
+        System.out.println("Creation Timestamp: " + creationTimestamp);
     }
 }
 
